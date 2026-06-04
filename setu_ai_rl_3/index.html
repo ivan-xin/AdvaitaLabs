@@ -369,7 +369,7 @@
 <div class="text-center mb-xl">
 <div class="inline-block mono-tag warning font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-md">THE MAIN LOOP · DIRECTIONAL</div>
 <h2 class="font-headline-md text-headline-md text-on-surface mb-md">Verified Optimization Loop<br/><span class="text-outline font-body-lg text-body-lg">真实场景里的端到端可信优化（目标形态）</span></h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">前面四个支柱不是孤立的能力，而是同一条主线的环节。作为目标形态，真正的 benchmark 不应只是一次性离线跑分，而应让 Agent / policy 在受控、可版本化的真实任务环境中持续 rollout，由客观指标衡量，再引入人和 Agent 的主观判断进行解释与修订，最后回到执行。Setu 的方向是用 logic clock / 时序逻辑把这条闭环串成可验证的因果历史：什么必须先于什么，谁的判断基于谁的结果。</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">前面四个支柱不是孤立的能力，而是同一条主线的环节。作为目标形态，benchmark 不应是一次性的离线跑分，而应是一个持续过程：让 policy 在受控、可版本化的真实任务环境中 rollout，由客观指标衡量，再引入人和 Agent 的主观判断进行解释；据此修订 policy、模型或任务规格，更新后的 policy 再回到 rollout，形成闭环。Setu 的方向是用 logic clock / 时序逻辑把这条闭环串成可验证的因果历史：什么必须先于什么，谁的判断基于谁的结果。</p>
 <p class="font-body-md text-body-md text-outline max-w-3xl mx-auto leading-relaxed mt-md">这条闭环本质就是 RL 的 rollout → reward → policy update 循环。不同的是，Setu 把其中的 reward 拆成可验证的客观指标（Measure）+ 可追踪的主观判断（Judge），而不是一个不可解释的标量。前面把工作二分为客观 / 主观，是为了分别处理；在闭环里两者再合成一个可解释的 reward。这正是 human-in-the-loop RL / RLHF 的可信化。</p>
 </div>
 <div class="glass-panel p-xl rounded-xl">
@@ -377,7 +377,7 @@
 <div class="tonal-level-1 p-lg rounded-lg text-center">
 <span class="material-symbols-outlined text-primary text-3xl mb-sm">play_circle</span>
 <h4 class="font-headline-sm text-headline-sm text-on-surface mb-xs">01 · Rollout</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Solver 让 policy / Agent 在受控、可版本化的真实任务环境中持续 rollout；policy、模型与数据版本由 passport 锚定，输入与环境被提交。</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Solver 让 policy 在受控、可版本化的真实任务环境中持续 rollout；policy、模型与数据版本由 passport 锚定，输入与环境被提交。</p>
 </div>
 <div class="tonal-level-1 p-lg rounded-lg text-center">
 <span class="material-symbols-outlined text-primary text-3xl mb-sm">monitoring</span>
