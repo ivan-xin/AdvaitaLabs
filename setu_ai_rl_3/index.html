@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Setu: Verifiable AI Work Network</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://lh3.googleusercontent.com/aida/AP1WRLtNLVwqjuslPtRhyGMi8IRkCeuII3O1FIKeeoYjAGVk27vdtPV6HnWCNo0ME6HqIyrYq7_sbErG3pKszcdPPr3y0nu9SjfMt7QYkKRjvgmbwEHMBU9llrGYUUKF9T0AnL4RrzniFGQmiOsGcAadgyUEjxxQoY8vskpQ6uXmL5xkxnjteERfE0Oh2Ca1brFblGB1a5T-UPy2A8m5Uggm5AV0LGztFpPsvicgy7ucYdjlNkiO64JHJUF1Ruo" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#d6e3ff",
+                      "on-primary-fixed-variant": "#00468d",
+                      "inverse-primary": "#005db8",
+                      "on-tertiary-fixed-variant": "#673d00",
+                      "on-error": "#690005",
+                      "tertiary-fixed-dim": "#ffb868",
+                      "surface-container-high": "#2a2a2a",
+                      "inverse-on-surface": "#313030",
+                      "error": "#ffb4ab",
+                      "secondary-container": "#00f4fe",
+                      "on-tertiary": "#482900",
+                      "tertiary": "#ffb868",
+                      "surface-bright": "#3a3939",
+                      "on-secondary-container": "#006c71",
+                      "secondary-fixed-dim": "#00dce5",
+                      "primary-fixed-dim": "#aac7ff",
+                      "outline-variant": "#414754",
+                      "on-background": "#e5e2e1",
+                      "on-secondary-fixed-variant": "#004f53",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface": "#131313",
+                      "secondary-fixed": "#63f7ff",
+                      "tertiary-fixed": "#ffddbb",
+                      "surface-container-highest": "#353534",
+                      "surface-tint": "#aac7ff",
+                      "on-tertiary-fixed": "#2b1700",
+                      "primary-container": "#3e90ff",
+                      "on-error-container": "#ffdad6",
+                      "surface-container": "#201f1f",
+                      "primary": "#aac7ff",
+                      "on-primary-container": "#002957",
+                      "background": "#131313",
+                      "on-secondary": "#003739",
+                      "surface-variant": "#353534",
+                      "surface-dim": "#131313",
+                      "tertiary-container": "#ce7f00",
+                      "surface-container-low": "#1c1b1b",
+                      "outline": "#8b91a0",
+                      "secondary": "#e6feff",
+                      "on-surface-variant": "#c0c6d6",
+                      "on-secondary-fixed": "#002021",
+                      "on-primary": "#003064",
+                      "on-primary-fixed": "#001b3e",
+                      "inverse-surface": "#e5e2e1",
+                      "error-container": "#93000a",
+                      "on-tertiary-container": "#3f2300",
+                      "on-surface": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "xs": "4px",
+                      "margin-desktop": "64px",
+                      "md": "16px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "base": "4px",
+                      "xl": "48px",
+                      "lg": "24px",
+                      "sm": "8px"
+              },
+              "fontFamily": {
+                      "label-mono-md": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-sm": [
+                              "Geist"
+                      ],
+                      "headline-md": [
+                              "Geist"
+                      ],
+                      "label-mono-sm": [
+                              "JetBrains Mono"
+                      ],
+                      "code-snippet": [
+                              "JetBrains Mono"
+                      ],
+                      "body-md": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Geist"
+                      ],
+                      "display-lg": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "label-mono-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-mono-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "code-snippet": [
+                              "13px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e5e2e1;
+        }
+        
+        .glass-panel {
+            background: rgba(18, 18, 18, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid #1F2937;
+        }
+
+        .cyber-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+        }
+
+        .logic-line {
+            position: relative;
+        }
+        .logic-line::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 24px;
+            height: 1px;
+            background-color: #aac7ff;
+            opacity: 0.5;
+        }
+        .logic-node {
+            position: relative;
+        }
+        .logic-node::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -4px;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background-color: #aac7ff;
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(170, 199, 255, 0.6);
+        }
+
+        /* Tonal Levels */
+        .tonal-level-1 {
+            background-color: #121212;
+            border: 1px solid #1F2937;
+        }
+
+        /* Mono tag */
+        .mono-tag {
+            background-color: #121212;
+            border: 1px solid #1F2937;
+            color: #aac7ff;
+        }
+        .mono-tag.success { border-color: #00dce5; color: #00dce5; }
+        .mono-tag.warning { border-color: #ffb868; color: #ffb868; }
+
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md" style="background-color: #000000; color: #e5e2e1;">
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pb-24 px-margin-desktop overflow-hidden pt-32">
+<div class="absolute inset-0 cyber-grid z-0"></div>
+<div class="relative z-10 max-w-5xl mx-auto text-center">
+<div class="inline-flex items-center justify-center gap-sm mono-tag success font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-lg"><span class="w-2 h-2 rounded-full bg-secondary-fixed shadow-[0_0_8px_#00dce5]"></span>CONCEPT ARCHITECTURE</div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-md">
+                    Setu: Verifiable AI Work Network<br/>
+<span class="text-outline">可验证 AI 工作网络</span>
+</h1>
+<p class="font-headline-sm text-headline-sm text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
+                    Prove objective runs. Trace subjective judgments. Settle contributions.<br/>
+<span class="font-body-lg text-body-lg text-outline mt-sm block">把 AI/RL 工作变成可验证的因果历史：客观结果可证明，主观判断可追踪，贡献可结算。</span>
+</p>
+</div>
+</section>
+<!-- Problem Statement -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-4xl mx-auto">
+<div class="tonal-level-1 p-xl rounded-lg border-l-4 border-l-error">
+<div class="flex items-start gap-md mb-md">
+<span class="material-symbols-outlined text-error text-3xl">warning</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">The Missing Context Problem</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">AI/RL 不缺结果，缺的是结果背后的可信上下文。一个跑分背后，模型版本、数据版本、评测脚本、seed、运行环境和输出摘要往往不可验证；一个主观判断背后，谁质疑、谁修订、为什么被接受，也很难追踪。<br/><br/><strong class="text-primary">Setu 解决的不是“结果上链”，而是把 AI 工作中的执行、判断、修订和贡献结算组织成可验证的因果历史。</strong></p>
+</div>
+</div>
+</section>
+<!-- Core Insight (Bento Grid) -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-6xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xl text-center">Core Insight: Work Classification</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Objective Work -->
+<div class="glass-panel p-xl rounded-xl relative overflow-hidden group hover:border-primary/50 transition-colors">
+<div class="absolute top-0 right-0 p-lg opacity-10">
+<span class="material-symbols-outlined text-9xl">analytics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-md flex items-center gap-sm">
+<span class="material-symbols-outlined">done_all</span>
+                            Objective Work
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">
+                            跑分、延迟、成功率、环境 reward、policy evaluation 等有可复现 metric 的工作。它们可以先生成可审计、可复核的 benchmark receipt；随着 TEE attestation 与 measurement allowlist 接入，再升级为硬件级 Verified Benchmark Receipt。
+                        </p>
+<div class="bg-surface-container-lowest p-md border border-outline-variant/30 rounded font-label-mono-sm text-label-mono-sm text-outline">&gt; Inputs and environment committed<br/>&gt; Outputs anchored to finality<br/>&gt; Attestation-ready execution path</div>
+</div>
+<!-- Subjective Work -->
+<div class="glass-panel p-xl rounded-xl relative overflow-hidden group hover:border-tertiary/50 transition-colors">
+<div class="absolute top-0 right-0 p-lg opacity-10">
+<span class="material-symbols-outlined text-9xl">forum</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary mb-md flex items-center gap-sm">
+<span class="material-symbols-outlined">rate_review</span>
+                            Subjective Work
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">
+                                                                         论文评审、战略判断、设计取舍、Agent critique 等场景里，没有单一真值可言。Setu 不追求证明某个观点绝对正确，而是用 Logic Clock 记录判断如何形成，让它在质疑和修订中变得更鲁棒。网络要达成共识的不是“谁对”，而是判断之间的因果顺序——谁基于谁、谁修订谁。</p>
+<div class="bg-surface-container-lowest p-md border border-outline-variant/30 rounded font-label-mono-sm text-label-mono-sm text-outline">
+                            &gt; Deliberation process captured<br/>
+                            &gt; Causal relationships mapped<br/>
+                            &gt; Logic Clock sequence established
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Four Pillars -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xl text-center">The Four Pillars of Setu</h2>
+<div class="flex flex-col gap-24">
+<!-- Pillar 1 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="order-2 lg:order-1">
+<div class="mono-tag success inline-block font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-md">PILLAR 01</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-md">Verified Benchmark</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">以 Solver 执行和 TEE 执行证明作为生产级目标路径，把自报式跑分转化为可审计、可复核、可引用的 benchmark receipt。</p>
+</div>
+<div class="order-1 lg:order-2 tonal-level-1 p-xs rounded-xl shadow-[0_2px_0_rgba(170,199,255,0.1)]">
+<img alt="Diagram of Verified Benchmark Process showing registration, trusted execution, and final receipt" class="w-full rounded-lg border border-outline-variant/50" src="https://lh3.googleusercontent.com/aida/AP1WRLs76nTaeSsU9ATmkIHNRmeeEcTis-LwDap8MmWBRb0bZuPJJShRM0foTP7ArNuMQu1JtpDj1puSd4I6DMTlgk3_lZqhWYbhQctb-zzxSki7x03NCZs2YfuCJJgfhCaTccOAoXgSGLyQAB3IRtdja4Ho3lMuBqpvB21SLQkSByPCBqzCh3O51K1jvinZT9pZFdZmebalBiStdv4ZmGRhdzArWSWQ_l7694o0_wbYvtkILUpYDv2DNWE9dA"/>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="tonal-level-1 p-xs rounded-xl shadow-[0_2px_0_rgba(170,199,255,0.1)]">
+<img alt="Diagram of Trusted Provenance detailing Model and Data Passport flow with hash, version tracking, and royalty record" class="w-full rounded-lg border border-outline-variant/50" src="https://lh3.googleusercontent.com/aida/AP1WRLu5NwllKK_oiv9OoKq87xR8wAxZdA83K_99Zzyktnu99-0jGlHIOjI7Y2hYP6IDJ7kh7UjGkWui5LOeclLvme7p8VpZKvlagGdYuKvyJTXbE0WgcQoTI0CSCuSJPoqg0L7hqbR7B8DWuzbiE6gUf1r1XKXLoqFClZv6Hap7iVRNxin7FPFGHWe9O_BuDROkgiK0B1U9mUc6wUturrRR6Qv-8o6ycGVxRXSQyD9d-Xb0kKwoq0BTh-GnMTc"/>
+</div>
+<div>
+<div class="mono-tag text-primary inline-block font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-md">PILLAR 02</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-md">Trusted Provenance</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">
+                                将模型和数据的身份、版本、哈希与收益分配逻辑记录在链上，同时把真实权重和数据集保留在链下，以兼顾隐私、成本和可扩展性。
+                            </p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="order-2 lg:order-1">
+<div class="mono-tag warning inline-block font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-md">PILLAR 03</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-md">Verified Deliberation</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">记录一个判断如何被提出、质疑、修订和支持。它不裁决观点真假，而是确认审议过程中的因果历史，让一个判断在多主体挑战下逐步积累鲁棒性。它不替代同行评审或治理裁决，只提供可追踪、抗篡改的审议因果记录。</p>
+</div>
+<div class="order-1 lg:order-2 tonal-level-1 p-xs rounded-xl shadow-[0_2px_0_rgba(170,199,255,0.1)]">
+<img alt="Diagram of Verified Deliberation process showing judgment, critique, revision, and consensus on causality" class="w-full rounded-lg border border-outline-variant/50" src="https://lh3.googleusercontent.com/aida/AP1WRLsbaI9VgzxFRvmIt7b_DWpeFGlid6Yu4TqyhHRDOlaZ6EeO_uk4JgacOsZJy-5pY6Qa3VIdjE5GZrughskBKrSD9WjUgcIgiujbFejnnt2E9U0gpi81pBH6zq8I0M0gcaHrkcj8fLmWVfs-wNPAxBQp0Xml_f-hNwwytH8SsOwNG7wwBLpYi7BFaduc6zlJWsPZeIoJ09r5kuSWD6INDU0JR1lU0D6Ux8Fro1LeXIsrueu1q03ZCStgwHY"/>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="tonal-level-1 p-xs rounded-xl shadow-[0_2px_0_rgba(170,199,255,0.1)]">
+<img alt="Diagram of Solver Market settlement flow showing task submission, solver execution, result validation, and automated payout" class="w-full rounded-lg border border-outline-variant/50" src="https://lh3.googleusercontent.com/aida/AP1WRLt_uEp8qcNMVNkW4mqSI6Fiaul0HUeOJUjA2bMwVW-O-HuZujXKmat5Ky26LxvWjFUFcFyD1BuRFQ3RrRlIAoPAvW7c0ShrroY-8ubjY6tZdn44W7I2H8TK24WqiJgsq6Q8sfvBcsJCJHWv3ZBUlGpaz5Rjlhk5TTchjX_ZuwBg7BR382zv6aN35ExTZK28nz-egQhA54rSmdJlWnfejgwjC-uX45DhbeGkMXPBpXeNb0dNDC-7iYBT1x0"/>
+</div>
+<div>
+<div class="mono-tag success inline-block font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-md">PILLAR 04</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-md">Solver Market</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">Solver 节点执行 AI/RL 任务，未来可通过 TEE remote attestation + measurement allowlist 验证执行环境，目标是通过 Setu 原生结算自动分配任务费用和贡献收益。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Verified Optimization Loop / 端到端可信优化闭环 -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-xl">
+<div class="inline-block mono-tag warning font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-md">THE MAIN LOOP · DIRECTIONAL</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-md">Verified Optimization Loop<br/><span class="text-outline font-body-lg text-body-lg">真实场景里的端到端可信优化（目标形态）</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">前面四个支柱不是孤立的能力，而是同一条主线的环节。作为目标形态，真正的 benchmark 不应只是一次性离线跑分，而应让 Agent / policy 在受控、可版本化的真实任务环境中持续 rollout，由客观指标衡量，再引入人和 Agent 的主观判断进行解释与修订，最后回到执行。Setu 的方向是用 logic clock / 时序逻辑把这条闭环串成可验证的因果历史：什么必须先于什么，谁的判断基于谁的结果。</p>
+<p class="font-body-md text-body-md text-outline max-w-3xl mx-auto leading-relaxed mt-md">这条闭环本质就是 RL 的 rollout → reward → policy update 循环。不同的是，Setu 把其中的 reward 拆成可验证的客观指标（Measure）+ 可追踪的主观判断（Judge），而不是一个不可解释的标量。前面把工作二分为客观 / 主观，是为了分别处理；在闭环里两者再合成一个可解释的 reward。这正是 human-in-the-loop RL / RLHF 的可信化。</p>
+</div>
+<div class="glass-panel p-xl rounded-xl">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-md items-stretch">
+<div class="tonal-level-1 p-lg rounded-lg text-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm">play_circle</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-xs">01 · Rollout</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Solver 让 policy / Agent 在受控、可版本化的真实任务环境中持续 rollout；policy、模型与数据版本由 passport 锚定，输入与环境被提交。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-lg text-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm">monitoring</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-xs">02 · Measure</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">基于客观 reward / 指标（成功率、回报、延迟等）生成可审计、可复核的 receipt；TEE attestation 接入后升级为硬件级 verified receipt。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-lg text-center">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-sm">rate_review</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-xs">03 · Judge</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">人与 Agent 的主观判断介入：质疑、支持、解释标量 reward 背后的语境。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-lg text-center">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-sm">tune</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-xs">04 · Update</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">基于客观 reward 与主观判断更新 policy、模型或任务规格。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-lg text-center">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl mb-sm">replay</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-xs">05 · Re-run &amp; Settle</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">更新后的 policy 回到 rollout；每轮贡献按 receipt 自动结算，形成可追踪、可复核的优化迭代。</p>
+</div>
+</div>
+<div class="mt-lg bg-surface-container-lowest p-md border border-outline-variant/30 rounded font-label-mono-sm text-label-mono-sm text-outline text-center">
+                            rollout → measure → judge → update → re-run → settle · RL loop ordered by logic clock / temporal logic
+                        </div>
+</div>
+</div>
+</section>
+<!-- Where This Matters / 典型场景 -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xl text-center">Where This Matters / 典型场景</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-colors">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Verified Benchmark for Papers<br/><span class="text-outline text-body-lg font-body-lg">论文与打榜的可信跑分</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">研究者提交模型版本、数据版本、评测脚本、seed、环境和输出摘要，生成可审计、可复核的 benchmark receipt；TEE attestation 成熟后升级为硬件级 verified receipt，可放进 paper、OpenReview、GitHub、HuggingFace 和 leaderboard。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-colors">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Private Test Set Evaluation<br/><span class="text-outline text-body-lg font-body-lg">私有测试集评测</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">数据方不公开 hidden test set，模型方提交模型或推理任务，Solver/TEE 在受控环境中执行，目标是只输出可审计分数和 receipt；TEE attestation 成熟后提供硬件级可信分数。适合医学、金融、法律和企业内部 agent benchmark。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30 hover:border-tertiary/50 transition-colors">
+<h3 class="font-headline-sm text-headline-sm text-tertiary mb-sm">Agent / Research Deliberation<br/><span class="text-outline text-body-lg font-body-lg">审议与判断演化</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">人和 Agent 对论文、设计方案或战略判断进行 critique、revision、support。Setu 记录谁基于谁、谁反驳谁、谁修订谁，形成可追踪、可复核的判断因果历史。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30 hover:border-secondary/50 transition-colors">
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-sm">Benchmark Bounty &amp; Settlement<br/><span class="text-outline text-body-lg font-body-lg">任务悬赏与自动结算</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">组织方发布 benchmark 或任务悬赏，Solver 执行任务，结果确认后自动结算给模型方、数据方、评测维护方和算力提供方。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30 hover:border-tertiary/50 transition-colors">
+<h3 class="font-headline-sm text-headline-sm text-tertiary mb-sm">Trusted RLHF / Policy Eval<br/><span class="text-outline text-body-lg font-body-lg">可信 RLHF 与受控真实任务环境策略评估</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">数据方提供受控、可版本化的任务环境，Solver 跑 policy 的 rollout，人给出偏好 / 奖励判断，客观 reward 与主观判断全程因果可追。适合 RLHF、agentic RL 和真实场景的策略迭代与复现。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Setu -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-lg">Beyond a Ledger: A Trusted Experimental Machine</h2>
+<div class="glass-panel p-xl rounded-xl">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed text-left">普通链可以记录 hash，但很难证明任务是否按指定规则执行，也很难追踪判断如何被挑战和修订。Setu 的机会在于，把 DAG-BFT finality、Solver execution、logic-clock causality 和 native settlement 放进同一个工作流。因此 Setu 不只是可信公告栏，而是可信实验机：证明任务如何执行、判断如何形成、贡献如何结算。<br/><br/><span class="text-outline">Setu 不训练模型、不托管大文件、不裁决主观对错；它做的是执行证明、因果记录和贡献结算。</span><br/><br/><span class="text-tertiary font-label-mono-sm text-label-mono-sm">说明：receipt 的可信强度分阶段演进。第一阶段提供可追踪、可复核的因果记录；后续接入 TEE remote attestation 与 measurement allowlist 后，升级为硬件级执行证明。</span></p>
+</div>
+</div>
+</section>
+<!-- Roadmap Section -->
+<section class="py-12 px-margin-desktop"><div class="max-w-4xl mx-auto text-center"><p class="font-label-mono-md text-label-mono-md text-primary opacity-80 uppercase tracking-widest">Path: auditable receipts → model/data passport → private-set eval → solver settlement → controlled real-world optimization loop, with verified deliberation as the long-term thesis.</p></div></section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-xl px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-lg font-body-lg text-body-lg opacity-80 hover:opacity-100">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface mb-sm">Setu Protocol — Directional Concept Draft</div>
+<p class="text-on-surface-variant font-label-mono-sm text-label-mono-sm">© 2026 Setu Protocol. Prove the run. Trace the judgment. Settle the contribution.</p>
+</div>
+<div class="flex flex-wrap gap-lg"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Concept</a><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Architecture</a><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Roadmap</a></div>
+</footer>
+</body></html>
