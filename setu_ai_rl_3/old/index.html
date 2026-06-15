@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Advaita × Setu: Verifiable Bio-AI Evidence Network</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://lh3.googleusercontent.com/aida/AP1WRLtNLVwqjuslPtRhyGMi8IRkCeuII3O1FIKeeoYjAGVk27vdtPV6HnWCNo0ME6HqIyrYq7_sbErG3pKszcdPPr3y0nu9SjfMt7QYkKRjvgmbwEHMBU9llrGYUUKF9T0AnL4RrzniFGQmiOsGcAadgyUEjxxQoY8vskpQ6uXmL5xkxnjteERfE0Oh2Ca1brFblGB1a5T-UPy2A8m5Uggm5AV0LGztFpPsvicgy7ucYdjlNkiO64JHJUF1Ruo" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#d6e3ff",
+                      "on-primary-fixed-variant": "#00468d",
+                      "inverse-primary": "#005db8",
+                      "on-tertiary-fixed-variant": "#673d00",
+                      "on-error": "#690005",
+                      "tertiary-fixed-dim": "#ffb868",
+                      "surface-container-high": "#2a2a2a",
+                      "inverse-on-surface": "#313030",
+                      "error": "#ffb4ab",
+                      "secondary-container": "#00f4fe",
+                      "on-tertiary": "#482900",
+                      "tertiary": "#ffb868",
+                      "surface-bright": "#3a3939",
+                      "on-secondary-container": "#006c71",
+                      "secondary-fixed-dim": "#00dce5",
+                      "primary-fixed-dim": "#aac7ff",
+                      "outline-variant": "#414754",
+                      "on-background": "#e5e2e1",
+                      "on-secondary-fixed-variant": "#004f53",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface": "#131313",
+                      "secondary-fixed": "#63f7ff",
+                      "tertiary-fixed": "#ffddbb",
+                      "surface-container-highest": "#353534",
+                      "surface-tint": "#aac7ff",
+                      "on-tertiary-fixed": "#2b1700",
+                      "primary-container": "#3e90ff",
+                      "on-error-container": "#ffdad6",
+                      "surface-container": "#201f1f",
+                      "primary": "#aac7ff",
+                      "on-primary-container": "#002957",
+                      "background": "#131313",
+                      "on-secondary": "#003739",
+                      "surface-variant": "#353534",
+                      "surface-dim": "#131313",
+                      "tertiary-container": "#ce7f00",
+                      "surface-container-low": "#1c1b1b",
+                      "outline": "#8b91a0",
+                      "secondary": "#e6feff",
+                      "on-surface-variant": "#c0c6d6",
+                      "on-secondary-fixed": "#002021",
+                      "on-primary": "#003064",
+                      "on-primary-fixed": "#001b3e",
+                      "inverse-surface": "#e5e2e1",
+                      "error-container": "#93000a",
+                      "on-tertiary-container": "#3f2300",
+                      "on-surface": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "xs": "4px",
+                      "margin-desktop": "64px",
+                      "md": "16px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "base": "4px",
+                      "xl": "48px",
+                      "lg": "24px",
+                      "sm": "8px"
+              },
+              "fontFamily": {
+                      "label-mono-md": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-sm": [
+                              "Geist"
+                      ],
+                      "headline-md": [
+                              "Geist"
+                      ],
+                      "label-mono-sm": [
+                              "JetBrains Mono"
+                      ],
+                      "code-snippet": [
+                              "JetBrains Mono"
+                      ],
+                      "body-md": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Geist"
+                      ],
+                      "display-lg": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "label-mono-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-mono-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "code-snippet": [
+                              "13px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e5e2e1;
+        }
+        
+        .glass-panel {
+            background: rgba(18, 18, 18, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid #1F2937;
+        }
+
+        .cyber-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+        }
+
+        .logic-line {
+            position: relative;
+        }
+        .logic-line::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 24px;
+            height: 1px;
+            background-color: #aac7ff;
+            opacity: 0.5;
+        }
+        .logic-node {
+            position: relative;
+        }
+        .logic-node::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -4px;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background-color: #aac7ff;
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(170, 199, 255, 0.6);
+        }
+
+        /* Tonal Levels */
+        .tonal-level-1 {
+            background-color: #121212;
+            border: 1px solid #1F2937;
+        }
+
+        /* Mono tag */
+        .mono-tag {
+            background-color: #121212;
+            border: 1px solid #1F2937;
+            color: #aac7ff;
+        }
+        .mono-tag.success { border-color: #00dce5; color: #00dce5; }
+        .mono-tag.warning { border-color: #ffb868; color: #ffb868; }
+
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md" style="background-color: #000000; color: #e5e2e1;">
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pb-24 px-margin-desktop overflow-hidden pt-32">
+<div class="absolute inset-0 cyber-grid z-0"></div>
+<div class="relative z-10 max-w-5xl mx-auto text-center">
+<div class="inline-flex items-center justify-center gap-sm mono-tag success font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-lg"><span class="w-2 h-2 rounded-full bg-secondary-fixed shadow-[0_0_8px_#00dce5]"></span>AI4SCI · SOVEREIGN TRUST LAYER</div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-md">
+                    Verifiable Bio-AI Evidence Network<br/>
+<span class="text-outline">可验证 Bio-AI 证据网络</span>
+</h1>
+<p class="font-headline-sm text-headline-sm text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
+                    Advaita uses Setu as the sovereign trust and economic layer for AI4SCI: verifiable benchmarks, secure model/data passports, scientific deliberation, and contribution settlement.<br/>
+<span class="font-body-lg text-body-lg text-outline mt-sm block">Advaita 用 Setu VLC + Sifakis 形式化验证，为 AI4SCI 提供主权可信底座：单细胞模型评测可复核，数据来源可追踪，专家判断可解释，科研贡献可结算。</span>
+</p>
+</div>
+</section>
+<!-- Problem Statement -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-4xl mx-auto">
+<div class="tonal-level-1 p-xl rounded-lg border-l-4 border-l-error">
+<div class="flex items-start gap-md mb-md">
+<span class="material-symbols-outlined text-error text-3xl">warning</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">The Bio-AI Evidence Gap / 生物 AI 的证据缺口</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">单细胞 RNA 测序和 Lingshu-Cell 这类工作说明方向已经清楚：AI 正在从静态细胞快照走向可预测的虚拟细胞世界。高校和药企要采用这类系统，需要一条可复核的证据链：一次模型评测用了什么数据、什么版本、什么环境？一个候选靶点或药物为什么被推进？专家判断基于哪次预测？后续实验支持还是推翻了它？<br/><br/><strong class="text-primary">Advaita + Setu 从 Bio-AI evidence layer 切入：先把 benchmark receipt、model/data passport、专家审议和贡献结算做扎实，再在这个可信底座上承载 AI 找药、虚拟细胞和干湿实验闭环。</strong></p>
+</div>
+</div>
+</section>
+<!-- AI4SCI Stack -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-xl">
+<div class="inline-block mono-tag success font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-md">AI4SCI STACK · DIRECTIONAL</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-md">Where Setu Fits in AI4SCI<br/><span class="text-outline font-body-lg text-body-lg">Setu 在 AI4SCI 主权栈中的位置</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">AI4SCI needs a layered trust architecture: models predict, data moves under security boundaries, evidence records causal history, and the economic layer sustains long-term contribution incentives.<br/><span class="text-outline">AI4SCI 需要分层可信架构：模型负责预测，数据层负责安全流转，证据层记录可信因果，经济层维持长期贡献激励。</span></p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm">science</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Model Layer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">scGPT / Lingshu-Cell 方向模型、扰动预测、虚拟细胞和未来高保真模拟。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm">database</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Secure Data Layer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">单细胞、扰动、蛋白质、临床和实验数据保留链下，身份、版本与授权进入 passport。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-sm">schema</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Evidence Layer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Setu 记录 benchmark、推理、审议、实验反馈之间的因果顺序，形成可复核 evidence graph。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl mb-sm">account_balance</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Economic Layer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">模型调用、数据贡献、评测维护、实验反馈和 public-goods 资助可被计量与结算。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Insight (Bento Grid) -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-6xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xl text-center">Core Insight: Setu Verifies the Work, Not the Biology / Setu 验证工作流，不替代生物学</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Objective Work -->
+<div class="glass-panel p-xl rounded-xl relative overflow-hidden group hover:border-primary/50 transition-colors">
+<div class="absolute top-0 right-0 p-lg opacity-10">
+<span class="material-symbols-outlined text-9xl">analytics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-md flex items-center gap-sm">
+<span class="material-symbols-outlined">done_all</span>
+                                                        Objective Evidence Work
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">
+                                                        单细胞模型评测、扰动预测、候选分子排序、私有测试集 benchmark——这些任务有明确输入、模型版本、数据版本、评测脚本和输出指标。Setu 可以先把它们变成可审计、可复核的 evidence receipt；重度 Bio-AI 推理保持在 GPU 集群，TEE 主要保护数据授权、指标计算、输出签名等关键边界。
+                        </p>
+<div class="bg-surface-container-lowest p-md border border-outline-variant/30 rounded font-label-mono-sm text-label-mono-sm text-outline">&gt; GPU-scale computation remains practical<br/>&gt; TEE secures critical boundaries<br/>&gt; Evidence anchored to finality</div>
+</div>
+<!-- Subjective Work -->
+<div class="glass-panel p-xl rounded-xl relative overflow-hidden group hover:border-tertiary/50 transition-colors">
+<div class="absolute top-0 right-0 p-lg opacity-10">
+<span class="material-symbols-outlined text-9xl">forum</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary mb-md flex items-center gap-sm">
+<span class="material-symbols-outlined">rate_review</span>
+                                                        Scientific Judgment Work
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">
+                                                                                                                                                                                                                                                                                                 哪个靶点值得推进、某个扰动反应是否有机制解释、一次 benchmark 是否足以支持论文结论——这些没有单一真值。科学家继续用自然语言审议；Agent 在后台把关键 claim、critique、revision 转成结构化约束与 Logic Clock 因果图，并保留原始上下文与人工确认。Setu 不裁决“谁对”，而是记录谁基于谁、谁修订谁。</p>
+<div class="bg-surface-container-lowest p-md border border-outline-variant/30 rounded font-label-mono-sm text-label-mono-sm text-outline">
+                                                        &gt; Natural-language review preserved<br/>
+                                                        &gt; Agent-assisted constraints generated<br/>
+                                                        &gt; Logic Clock causality established
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Four Pillars -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xl text-center">The Four Pillars · 更贴合 Setu 的四大支柱</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="glass-panel p-xl rounded-xl hover:border-primary/50 transition-colors">
+<div class="flex items-start justify-between gap-md mb-lg">
+<div class="mono-tag success inline-block font-label-mono-sm text-label-mono-sm px-sm py-xs rounded">PILLAR 01</div>
+<span class="material-symbols-outlined text-primary text-4xl">receipt_long</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-md">Verified Bio-AI Receipts</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">Bio-AI 的第一层可信入口，是为每次评测、推理和候选发现生成可复核 receipt：模型版本、数据版本、评测脚本、seed、运行环境、输入输出摘要都被提交并锚定。它可以服务论文复现、药企内部评测、合作方 benchmark，也为后续候选发现留下可追踪证据。</p>
+<div class="bg-surface-container-lowest p-md border border-outline-variant/30 rounded font-label-mono-sm text-label-mono-sm text-outline">model · data · script · environment · output</div>
+</div>
+<div class="glass-panel p-xl rounded-xl hover:border-primary/50 transition-colors">
+<div class="flex items-start justify-between gap-md mb-lg">
+<div class="mono-tag inline-block font-label-mono-sm text-label-mono-sm px-sm py-xs rounded">PILLAR 02</div>
+<span class="material-symbols-outlined text-primary text-4xl">badge</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-md">Model / Data / Experiment Passport</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">Setu 不托管大模型权重和私有生物数据，而是记录它们的身份、版本、哈希、授权范围和收益分配逻辑。scGPT / Lingshu-Cell 方向模型、公开单细胞数据、合作实验数据、药企私有数据都可以进入 passport，真实数据留在链下，ownership 和后续贡献可被追踪。</p>
+<div class="bg-surface-container-lowest p-md border border-outline-variant/30 rounded font-label-mono-sm text-label-mono-sm text-outline">identity · version · hash · license · ownership</div>
+</div>
+<div class="glass-panel p-xl rounded-xl hover:border-tertiary/50 transition-colors">
+<div class="flex items-start justify-between gap-md mb-lg">
+<div class="mono-tag warning inline-block font-label-mono-sm text-label-mono-sm px-sm py-xs rounded">PILLAR 03</div>
+<span class="material-symbols-outlined text-tertiary text-4xl">hub</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-md">Agent-Assisted Scientific Formalization</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">科学家不需要手写时序逻辑或状态机。系统内置 Agent 将自然语言中的 claim、critique、revision 转换为可检查的结构化约束与 Logic Clock 因果图，并保留人工确认和原始上下文。形式化验证不证明生物学真伪，而是检查审议流程、依赖关系和关键约束是否一致。</p>
+<div class="bg-surface-container-lowest p-md border border-outline-variant/30 rounded font-label-mono-sm text-label-mono-sm text-outline">natural language · agent translation · constraints · causality</div>
+</div>
+<div class="glass-panel p-xl rounded-xl hover:border-secondary/50 transition-colors">
+<div class="flex items-start justify-between gap-md mb-lg">
+<div class="mono-tag success inline-block font-label-mono-sm text-label-mono-sm px-sm py-xs rounded">PILLAR 04</div>
+<span class="material-symbols-outlined text-secondary-fixed text-4xl">payments</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-md">Hybrid Attestation &amp; Settlement</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">Bio-AI 的重度推理和微调运行在常规 GPU 集群；TEE 只承担轻量但关键的信任边界：数据授权解密、评测指标计算、输出摘要签名和 receipt sealing。Setu 记录任务、模型版本、数据承诺、执行摘要和因果顺序；后续可叠加 opML / fraud proof / 多方复跑机制，让重计算过程从自报结果升级为可审计、可挑战的证据链。</p>
+<div class="bg-surface-container-lowest p-md border border-outline-variant/30 rounded font-label-mono-sm text-label-mono-sm text-outline">GPU compute · TEE boundary · opML-ready · settlement</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Verified Optimization Loop / 端到端可信优化闭环 -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-xl">
+<div class="inline-block mono-tag warning font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-md">THE MAIN LOOP · DIRECTIONAL</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-md">Evidence-First Bio-AI Flywheel<br/><span class="text-outline font-body-lg text-body-lg">先做可信证据层，再长出发现闭环</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">可信闭环从可复核证据开始：评测如何运行、数据来自哪里、专家为何认可、实验如何反馈，都被记录为同一条因果链。证据层一旦跑通，就能承载候选靶点筛选、虚拟细胞模型、私有测试集评测和干湿实验合作；新的数据与反馈再回流到 passport 和 benchmark，形成可复核、可结算的 Bio-AI 飞轮。</p>
+<p class="font-body-md text-body-md text-outline max-w-3xl mx-auto leading-relaxed mt-md">Setu 的价值是在这条链路里提供可信顺序和结算：哪一次任务先发生，哪个专家基于哪个结果推进，哪个仪器签名的实验反馈验证或推翻了模型，哪份数据让模型变好。VLC 负责因果，Agent 辅助形式化负责把自然语言审议转成可检查结构，Hybrid Attestation 保护关键边界，enterprise settlement 负责把数据、算力、评测和实验贡献结算起来。</p>
+</div>
+<div class="glass-panel p-xl rounded-xl">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-md items-stretch">
+<div class="tonal-level-1 p-lg rounded-lg text-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm">play_circle</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-xs">01 · Specify</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">定义任务：benchmark、扰动预测、候选筛选、私有评测或实验反馈；提交模型、数据、脚本和权限边界。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-lg text-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm">monitoring</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-xs">02 · Run</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Solver 执行评测、推理或候选筛选；输入、环境、输出摘要和指标生成可审计 receipt。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-lg text-center">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-sm">rate_review</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-xs">03 · Review</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">科学家与 Agent 审议结果：机制是否合理、指标是否可信、哪些候选或结论值得继续推进。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-lg text-center">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-sm">tune</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-xs">04 · Link</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">把后续合作数据、私有 benchmark、论文结论或 instrument-signed wet-lab 结果链接回原始预测和审议节点。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-lg text-center">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl mb-sm">replay</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-xs">05 · Learn &amp; Settle</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">新数据和反馈进入 passport，用于模型微调与 benchmark 更新；数据、算力、专家和实验贡献按 receipt 结算。</p>
+</div>
+</div>
+<div class="mt-lg bg-surface-container-lowest p-md border border-outline-variant/30 rounded font-label-mono-sm text-label-mono-sm text-outline text-center">
+                                                        specify → run → review → link evidence → learn &amp; settle · bio-AI evidence ordered by logic clock / temporal logic
+                        </div>
+</div>
+</div>
+</section>
+<!-- Where This Matters / 典型场景 -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xl text-center">Where This Matters / 具体业务场景</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-colors">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Bio-AI Benchmark Receipt<br/><span class="text-outline text-body-lg font-body-lg">近期：论文 / 模型 / 私有评测的可信凭证</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">研究者或药企提交模型、数据版本、评测脚本、seed、环境和输出摘要，生成可审计 receipt。先服务论文复现、模型比较、私有测试集评测和 BD 展示，这是最贴合 Setu 当前能力的入口。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-colors">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">Private Perturbation Evaluation<br/><span class="text-outline text-body-lg font-body-lg">中期：药企 / 高校私有扰动评测</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">对 CRISPR、cytokine、药物扰动或候选靶点排序做私有评测。数据方不公开 hidden set，模型方提交任务，Setu 只记录可审计分数、模型 passport 和任务 receipt。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30 hover:border-tertiary/50 transition-colors">
+<h3 class="font-headline-sm text-headline-sm text-tertiary mb-sm">Virtual Cell Workflow<br/><span class="text-outline text-body-lg font-body-lg">扩展：虚拟细胞模型工作流</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">scGPT / Lingshu-Cell 方向模型作为外部或合作模型接入 Setu 工作流：细胞类型、个体身份、组织背景、干预条件、输出解释和专家审议都进入 evidence graph。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30 hover:border-secondary/50 transition-colors">
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-sm">Discovery Triage<br/><span class="text-outline text-body-lg font-body-lg">候选发现：人机共审与优先级排序</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">AI 可以给出候选靶点、候选分子或实验优先级，但推进与否仍由科学家判断。Setu 记录模型证据、专家意见、修订过程和后续结果，让“为什么推进这个候选”可追踪。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30 hover:border-tertiary/50 transition-colors">
+<h3 class="font-headline-sm text-headline-sm text-tertiary mb-sm">Instrument-Signed Lab Evidence<br/><span class="text-outline text-body-lg font-body-lg">长期：提高实验反馈可信度</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Wet-lab 反馈优先接入 LIMS、ELN 与实验仪器原始输出签名，而不是依赖人工上传 Excel。Setu 记录仪器身份、实验批次、样本链路、原始数据哈希和结果摘要；高价值候选可引入复验与 challenge 机制。</p>
+</div>
+<div class="tonal-level-1 p-lg rounded-xl border border-outline-variant/30 hover:border-secondary/50 transition-colors">
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-sm">Enterprise IP &amp; Data Royalty Trust<br/><span class="text-outline text-body-lg font-body-lg">合规：贡献核算与版税分润</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">面向药企、医院和政府机构，Setu 提供企业级贡献核算与知识产权分润基础设施。模型调用、数据贡献、实验验证和评测维护进入合规结算账本，最终通过合同、法币和权限化账户落地。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Setu -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-lg">Why Setu: Layered Trust &amp; Enterprise Settlement</h2>
+<div class="glass-panel p-xl rounded-xl">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed text-left">AI4SCI 的核心资产不是单个模型，而是可持续积累的模型、数据、实验、专家判断和经济激励。Setu 的角色是主权可信底座：重计算保留在 GPU 集群以维持性能，TEE 保护关键可信边界，Agent 将科学审议转成可检查结构，仪器签名实验数据提高反馈可信度，企业级 royalty infrastructure 把贡献变成合规结算。<br/><br/><span class="text-outline">Advaita 可以在 Setu 上构建 Bio-AI 产品矩阵：模型层负责预测，科学家负责判断，实验负责验证，Setu 负责因果、证据和结算。这样既契合 Setu 当前客观能力，也能自然延展到 AI 找药、虚拟细胞、干湿实验闭环、开放科学和公共物品资助。</span><br/><br/><span class="text-tertiary font-label-mono-sm text-label-mono-sm">说明：可信强度分阶段演进。第一阶段提供可追踪、可复核的因果记录；Hybrid Attestation 对关键边界提供硬件级信任，对重计算过程提供可审计、可复核、可挑战的证据链。</span></p>
+</div>
+</div>
+</section>
+<!-- Roadmap Section: Three Phases -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-xl">
+<div class="inline-block mono-tag success font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-md">GO-TO-MARKET · 三阶段路线</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">From Evidence Layer to Bio-AI Network<br/><span class="text-outline font-body-lg text-body-lg">从可信证据层，到 Bio-AI 工作网络</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Phase 1 -->
+<div class="glass-panel p-xl rounded-xl flex flex-col">
+<div class="mono-tag success inline-block self-start font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-md">PHASE 01</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-sm">可信证据层 · Bio-AI Receipt</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">对外叙事：先做最能匹配 Setu 的产品——Bio-AI 评测与证据凭证。它可以马上服务论文复现、模型比较、私有评测、公开 benchmark 和开放科学贡献记录。</p>
+<ul class="font-body-md text-body-md text-outline space-y-xs list-disc pl-md">
+<li>接入公开单细胞 / 扰动 benchmark 和开源模型</li>
+<li>生成 model/data/script/environment receipt</li>
+<li>产出：Demo 网站 + Bio-AI Benchmark / Passport 页面</li>
+<li>用于 onboarding 科学家、论文复现、公开评测和药企评测 BD</li>
+<li>让 open science / public goods 的数据、模型和评测贡献可被计量</li>
+</ul>
+</div>
+<!-- Phase 2 -->
+<div class="glass-panel p-xl rounded-xl flex flex-col">
+<div class="mono-tag text-primary inline-block self-start font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-md">PHASE 02</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary mb-sm">发现工作流 · 候选推进与数据合作</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">对外叙事：在可信证据层上承载 AI 找药、基因扰动和虚拟细胞任务，让候选发现、专家判断和合作数据形成可追踪工作流。</p>
+<ul class="font-body-md text-body-md text-outline space-y-xs list-disc pl-md">
+<li>对学校：私有化部署、合作论文</li>
+<li>对企业：私有 benchmark、候选靶点 / 分子排序、人机共审</li>
+<li>把 CRISPR、cytokine、药物扰动等干预作为可版本化任务管理</li>
+<li>合作中形成细胞 / 蛋白质 / 临床数据的 ownership</li>
+<li>接入 scGPT / Lingshu-Cell 方向模型，形成 model/data passport</li>
+<li>产出：可验证发现工作流 + benchmark 有效性验证 + 合作论文</li>
+</ul>
+</div>
+<!-- Phase 3 -->
+<div class="glass-panel p-xl rounded-xl flex flex-col">
+<div class="mono-tag warning inline-block self-start font-label-mono-sm text-label-mono-sm px-sm py-xs rounded mb-md">PHASE 03</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary-fixed mb-sm">干湿反馈网络 · API 与分润信托</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">对外叙事：当模型、数据合作和实验伙伴成熟后，扩展为可验证 Bio-AI 基础设施，把 dry-lab 任务、instrument-signed wet-lab 反馈、API 调用和企业级贡献结算连成网络。</p>
+<ul class="font-body-md text-body-md text-outline space-y-xs list-disc pl-md">
+<li>合作实验室验证高价值候选，仪器签名原始输出回流 evidence graph</li>
+<li>To-B API 商业化：可解释虚拟细胞 + 蛋白质 API· 按 call 计费</li>
+<li>企业级 IP / Data Royalty Trust：数据贡献者、实验室和模型维护者激励</li>
+<li>围绕具体药物研发、主权科研基础设施和企业私有评测扩展合作</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="py-12 px-margin-desktop"><div class="max-w-4xl mx-auto text-center"><p class="font-label-mono-md text-label-mono-md text-primary opacity-80 uppercase tracking-widest">Path: bio-AI receipts → hybrid attestation → secure model/data/experiment passport → discovery workflow → instrument-signed dry-wet evidence graph → sovereign bio API &amp; enterprise royalty trust.</p></div></section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-xl px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-lg font-body-lg text-body-lg opacity-80 hover:opacity-100">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface mb-sm">Advaita × Setu — Verifiable Bio-AI Evidence Network · Directional Concept</div>
+<p class="text-on-surface-variant font-label-mono-sm text-label-mono-sm">© 2026 Advaita / Setu Protocol. Bio-AI receipts. Secure passports. Verified discovery workflows. Settled contributions.</p>
+</div>
+<div class="flex flex-wrap gap-lg"><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Concept</a><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Architecture</a><a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Roadmap</a></div>
+</footer>
+</body></html>
